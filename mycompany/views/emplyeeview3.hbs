@@ -1,0 +1,36 @@
+{{>header1}}
+<div class="container-fluid mt-5 mb-5 ">
+    <h1 style="text-align: center;">Salary of Employee</h1>
+    <table class="table table-striped table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Designation</th>
+        <th scope="col">joinedDate</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Contact No</th>
+        <th scope="col">Email Id</th>
+        <th scope="col">Salary</th>
+       
+    </tr>
+     {{#each pdt}}
+      
+      <tr>
+        <td scope="col">{{this.emp_id}}</td>
+        <td scope="col">{{this.name}}</td>
+        <td scope="col">{{this.designation}}</td>
+        <td scope="col">{{this.join_date}}</td>
+        <td scope="col">{{this.date_birth}}</td>
+        <td scope="col">{{this.contact_no}}</td>
+        <td scope="col">{{this.email}}</td>
+        <td>
+          <a href="/salar/{{this.emp_id}}">Salary</a>
+        </td>
+      </tr>
+      </tr>
+      {{/each}}
+      
+</table>
+
+</div>
+{{>footer}}

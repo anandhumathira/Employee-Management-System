@@ -1,0 +1,177 @@
+body {
+  
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color:goldenrod !important;;
+}
+.first{
+  background-color: transparent;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.icon1{
+  color: #FFFFFF;
+  
+}
+.over1{
+
+  font-size: 30px;
+  font-weight: bold;
+  color:whitesmoke;
+ 
+}
+.over2{
+
+  font-size: 50px;
+  font-weight: bold;
+  color:whitesmoke;
+
+}
+.t{
+margin-top: 25%;
+margin-left: 9%;
+}
+.s{
+margin-top: 20%;
+margin-left:55%;
+}
+/* Custom CSS for carousel mirror effect */
+.carousel-inner {
+  overflow: hidden;
+}
+
+.item1 {
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  transform: scale(1.2);
+}
+
+.card1{
+  background-color:whitesmoke;
+}
+
+.ma{
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+}
+
+
+.background-div1 {
+  width: 100%;
+  background-image: url('/images/about.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* You can add more styles as needed */
+}
+.mar{
+  margin-top: 40%;
+  margin-left: 50%;
+  color:#FF0000;
+  
+}
+@keyframes increaseSize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+.fa-circle-play {
+  animation: increaseSize 2s infinite;
+}
+.nai{
+  color: white;
+}
+.testimonial {
+  text-align: center;
+  background-color:white;
+}
+
+.testimonial img {
+  width: 80px; /* Adjust the image size as needed */
+  border-radius: 50%;
+}
+.neee{
+  background-color: whitesmoke;
+}
+.fuu{
+  background-color: #1C2035;
+  color: gold;
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+.footer-links a {
+  color: gold !important;
+}
+
+.fee{
+  background-color: whitesmoke;
+}
+.no-transform .carousel-item.active {
+  transform: none; 
+}
+.no-transform .carousel-inner {
+ overflow: hidden;
+}
+
+.no-transform .carousel-item .card-img-top {
+  border-radius: 100%; 
+  width: 25%; 
+  
+}
+
+.rem{
+  text-align: center;
+}
+
+
+
+
+
+.card-body3 {
+  background-color: rgba(191, 27, 27, 0.3); /* Adjust the alpha value for transparency */
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px; /* Adjust the width as needed */
+  text-align: center;
+  backdrop-filter: blur(10px); /* Creates a blur effect */
+}
+.gee{
+  background-image: url('/images/p.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card4 {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card-title4 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.form-group4 {
+  margin-bottom: 20px;
+}
+.btn-login4 {
+  width: 100%;
+}

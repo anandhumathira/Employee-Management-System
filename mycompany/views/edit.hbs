@@ -1,0 +1,115 @@
+<style>
+    body {
+        background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with your actual background image */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-fluid {
+        display: flex;
+        color: whitesmoke;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    }
+
+    .card {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .card-title,
+    label {
+        color: whitesmoke;
+    }
+
+    .card-title {
+        border-bottom: 2px solid white;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 400px; /* Adjust the maximum width as needed */
+        margin: auto;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+
+<div class="container-fluid gee">
+
+    <div class="card card-body3 "> 
+        <div class="card-title">
+    <h1 class="text-center">Employee Edit</h1>
+  </div>
+  <div class="card-body">
+    <form action="/editdata" method="post" class="text-center">
+    <input type="hidden" name="hide" value="{{user.emp_id}}">
+      <table class="mx-auto"> 
+        <tr>
+          <td class="pr-3"><label for="name">Name:</label></td>
+          <td><input type="text" id="name" name="name" class="form-control" required value="{{user.name}}"></td>
+        </tr>
+        <tr>
+          <td class="pr-3"><label for="designation">Designation:</label></td>
+          <td><input type="text" id="designation" name="designation" class="form-control" value="{{user.designation}}" required></td>
+        </tr>
+        <tr>
+          <td class="pr-3"><label for="joinedDate">Joined Date:</label></td>
+          <td><input type="date" id="joinedDate" name="joinedDate" class="form-control" value="{{user.join_date}}" required></td>
+        </tr>
+        <tr>
+          <td class="pr-3"><label for="dob">Date of Birth:</label></td>
+          <td><input type="date" id="dob" name="dob" class="form-control" value="{{user.date_birth}}" required></td>
+        </tr>
+        <tr>
+          <td class="pr-3"><label for="contact">Contact No:</label></td>
+          <td><input type="text" id="contact" name="contact" class="form-control" value="{{user.contact_no}}" required></td>
+        </tr>
+        <tr>
+          <td class="pr-3"><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" class="form-control" value="{{user.email}}" required></td>
+        </tr>
+       
+        <tr>
+          <td></td>
+          <td><button type="submit" class="form-control btn btn-primary">Submit</button></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+    </div>
+  
+</div>

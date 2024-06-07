@@ -1,0 +1,95 @@
+<style>
+    body {
+        background-image: url('background-image.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-fluid {
+        display: flex;
+        color: whitesmoke;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .card-title,
+    label {
+        color: white; /* Explicitly set the text color to white */
+    }
+
+    .card-title {
+        border-bottom: 2px solid white;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    td {
+        padding: 8px;
+        border-bottom: 1px solid white; /* Add a border between table rows */
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container-fluid gee">
+    <div class="card card-body3 ">
+        <div class="card-title">
+            <h1 class="text-center">Employee Profile</h1>
+        </div>
+        <div class="card-body">
+            <table class="mx-auto">
+                <tr>
+                    <td class="pr-3"><label for="name">Name:</label></td>
+                    <td style="color: white;">{{emp.name}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3"><label for="designation">Designation:</label></td>
+                    <td style="color: white;">{{emp.designation}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3"><label for="joinedDate">Joined Date:</label></td>
+                    <td style="color: white;">{{emp.join_date}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3"><label for="dob">Date of Birth:</label></td>
+                    <td style="color: white;">{{emp.date_birth}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3"><label for="contact">Contact No:</label></td>
+                    <td style="color: white;">{{emp.contact_no}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3"><label for="email">Email:</label></td>
+                    <td style="color: white;">{{emp.email}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

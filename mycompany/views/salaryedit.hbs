@@ -1,0 +1,121 @@
+<style>
+    body {
+        background-image: url('/images/p.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-fluid {
+        display: flex;
+        color: whitesmoke;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .card-title,
+    label {
+        color: whitesmoke;
+    }
+
+    .card-title {
+        border-bottom: 2px solid white;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+<div class="container-fluid gee">
+    <div class="card card-body3 ">
+        <div class="card-title"> <h1>Salary</h1></div>
+        <div class="card-body">
+            <form action="/salledit" method="post" style="text-align: center;">
+            <input type="hidden" name="hided" value="{{user.emp_id}}">
+                <table>
+                    <tr>
+                        <td><label for="basicSalary">Basic Salary:</label></td>
+                        <td><input type="number" id="basicSalary" name="basic" oninput="calculateTotalSalary()" value="{{user.Basic_Salary}}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="da">DA (Dearness Allowance):</label></td>
+                        <td><input type="number" id="da" name="da" oninput="calculateTotalSalary()" value="{{user.DA}}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="hra">HRA (House Rent Allowance):</label></td>
+                        <td><input type="number" id="hra" name="hra" oninput="calculateTotalSalary()" value="{{user.HRA}}" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="pf">PF (Provident Fund):</label></td>
+                        <td><input type="number" id="pf" name="pf" oninput="calculateTotalSalary()" value="{{user.PF}}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="totalSalary">Total Salary:</label></td>
+                        <td><input type="text" name="ts" id="totalSalary" value="{{user.Total_Salary}}" readonly></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td><button type="submit" class="form-control btn btn-primary">Submit</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function calculateTotalSalary() {
+        // Get values from input fields
+        var basicSalary = parseFloat(document.getElementById('basicSalary').value) || 0;
+        var da = parseFloat(document.getElementById('da').value) || 0;
+        var hra = parseFloat(document.getElementById('hra').value) || 0;
+        var pf = parseFloat(document.getElementById('pf').value) || 0;
+
+        // Calculate Total Salary
+        var totalSalary = (basicSalary + da + hra) - pf;
+
+        // Display the result in the totalSalary field
+        document.getElementById('totalSalary').value = totalSalary;
+    }
+</script>
